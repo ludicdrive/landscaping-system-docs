@@ -4,11 +4,11 @@
 
 - Guide
 
-  - [DTM / Heightmaps](heights.md?id=heights)
-  - [Weightmaps / Paint Layers](landcover.md?id=landcover)
+  - [Terrain](heights.md?id=heights)
+  - [Landscape Material](landcover.md?id=landcover)
   - [Satellite Imagery](satellite?id=satellite)
   - [Splines / Actors / Blueprints](props.md?id=props)
-  - [Foliage](vegetation.md?id=vegetation)
+  - [PCG](vegetation.md?id=vegetation)
   - [Mapbox](mapbox.md?id=mapbox)
 
 - Fine tuning
@@ -20,11 +20,9 @@
 
   - [Extending Landscapes](extend_landscape.md?id=extending-landscapes)
   - [Custom Logic on Import](landscapingvectorinterface.md?id=custom-logic-on-vector-data)
-  - [Vectordata / Shapefile only](shp_without_dtm.md?id=vectordata-import-without-prior-dtm-import)
 
 - General
 
   - [Get data](get-data.md?id=get-data)
-  - [Max Landscape Size](max-landscape-size.md?id=maximum-landscape-size)
   - [Troubleshooting](troubleshooting.md?id=troubleshooting)
   - [Changelog](changelog.md?id=changelog)
