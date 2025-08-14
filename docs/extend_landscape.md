@@ -1,10 +1,9 @@
 # Extending Landscapes
 
-The plugin provides the ability to extend a Landscape. This is not the recommended way, but it may be useful if vast Landscapes should be created iteratively.  
+The plugin provides the ability to extend a Landscape. This is not the recommended way, but it may be useful if vast Landscapes should be created iteratively. It is also particularily useful to create backdrops (distant meshes).
 
-> The recommended way is to import large areas at once  
+> :bulb:  __Good to know__: For the playable area, the recommended way is to import large areas at once.  :bulb:
 
-It is possible to extend with other raster files (GeoTiff, etc.) or with Mapbox by selecting an area in the DTM Import Options.
+Said that, it is in principle possible to extend an imported area with any other raster files. One can also use data from Mapbox by selecting an area in the DTM Import Options.
 
-> The size of a landscape will always be the size of the first imported landscape. The resolution however can be altered by uncheck `Resample to first tile`.  
-> Using different sources may result in overlaps or gaps between landscapes. To resolve this, Landscapes can be moved to match up.
+The size of a landscape tile will always be the size of the first imported landscape. The resolution however can be altered by uncheck `Resample to first tile`. Additional imports will often completly overlap prior imports. Not wanted tiles can be deleted without side-effects.

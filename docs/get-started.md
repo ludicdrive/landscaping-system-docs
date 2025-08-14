@@ -42,7 +42,7 @@ When installing the plugin to the Unreal Engines `Plugins` folder, you have to a
 2) After clicking on the __Landscaping System Icon__ 🌍 on the toolbar, the __Landscaping System Tab__ pops up:  
 ![Landscaping System Tab](_media/ue5_landscaping_system_tab.png)
 3) Hit the `Select` button and choose your file or multiple files from above
-4) Click on `Options` to open the DTM Import Options - a popup opens and you should see a interactive map which shows the area which will be imported
+4) Click on `Options` to open the DTM Import Options - a popup opens and you will see an interactive map showing the area which will be imported
 5) Scroll to `Desired Max Tile Size` and increase the value to 12000. This will make sure, that only one landscape will be generated
 6) Close the `DTM Options` and hit the `Import from Files` button - the landscape will be imported within a few seconds 🌍
 

@@ -10,15 +10,15 @@ The satellite imagery will be automatically projected and cropped to the size of
 
 ## Satellite Image as Decal
 
-If set to true, a decal actor will be created and the satellite texture will be projected onto the landscape. (Default).
+If selected, a decal actor will be created and the satellite texture will be projected onto the landscape. (Default).
 
 ## Satellite Image as Vertex Color
 
 Only available on mesh landscapes (`LandscapingProcMeshLandscape`). If set to true, the satellite image will be applied directly onto the mesh (as vertex color). When trying to import satellite imagery as vertex color on a landscape, it will fall back to decal.
 
-## Both `Decal` and `Vertex Color` set to false
+## Landscape Material
 
-If neither decal or vertex color is checked, the satellite imagery will be created as Landscape Material on Landscapes or as as Material on Mesh Terrains.
+If selected, the satellite imagery will be created as Landscape Material on Landscapes or as as Material on Mesh Terrains.
 
 ## Mapbox Zoom Level
 
