@@ -36,7 +36,7 @@ When installing the plugin to the Unreal Engines `Plugins` folder, you have to a
 
 ## Import your first terrain with Landscaping System
 
-> Download an example heightmap in [GeoTiff](https://cloud.ludicdrive.com/s/4HQPy8phBTxEL4z/download) format, or use another DTM (Digital Terrain Model) file or multiple files.
+> Download an example heightmap in [GeoTiff](https://cloud.ludicdrive.com/s/pVh3U8TpAg27Foa/download) format, or use another DTM (Digital Terrain Model) file or multiple files.
 
 1) Start with a new empty level: Go to "File -> New Level -> __Empty Open World__ or __Empty Level__"
 2) After clicking on the __Landscaping System Icon__ 🌍 on the toolbar, the __Landscaping System Tab__ pops up:  
@@ -44,7 +44,7 @@ When installing the plugin to the Unreal Engines `Plugins` folder, you have to a
 3) Hit the `Select` button and choose your file or multiple files from above
 4) Click on `Options` to open the DTM Import Options - a popup opens and you should see a interactive map which shows the area which will be imported
 5) Scroll to `Desired Max Tile Size` and increase the value to 12000. This will make sure, that only one landscape will be generated
-6) Close the `DTM Options` and hit the `Import from Files` button - the landscape will be imported within a few seconds
+6) Close the `DTM Options` and hit the `Import from Files` button - the landscape will be imported within a few seconds 🌍
 
 > :bulb: **Good to know**: Every time you open a new level, you should close and re-open the __Landscaping System Tab__ for proper initialization. :bulb:
 
