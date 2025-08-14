@@ -1,15 +1,15 @@
 # Mapbox
 
-With the extension [Landscaping Mapbox](https://www.unrealengine.com/marketplace/en-US/product/landscaping-mapbox) heightmap tiles from Mapbox can easily be imported.
-Therefore only the extents of the area to import must be selected in the [DTM Import Options](heights?id=import-area-optional) dialog. (In UE4 the extents (bounding box) of the area must be pasted into the [DTM Import Options](heights?id=import-area-optional) dialog).  
-The heightmaps will be downloaded automatically and the Landscape / World Composition / World Partition will be created.  
+With the extension [Landscaping Mapbox](https://unrealassetstore.com/product/landscaping-mapbox) heightmap tiles from Mapbox can easily be imported.
+Therefore only the extents of the area to import must be selected in the [DTM Import Options](heights?id=import-area-optional) dialog.
+The heightmaps will be downloaded automatically and the Landscape Mesh will be created.  
 
 ## Mapbox Data
 
 ### Heightmap data
 
 The heightmap data used is `Mapbox Terrain-DEM v1` or `Mapbox Terrain-RGB v1` - it can be chosen in the Settings.  
-Depending on the area, the highest zoom level is 14 or 15. Despite Mapbox claims that for `Mapbox Terrain-DEM v1` data until zoom level 15 is available, it is only availalbe up to zoom level 14 for most regions. `Mapbox Terrain-DEM v1` will be loaded with double resolution and is therefore from the same quality as ``Mapbox Terrain-RGB v1`.  
+Depending on the area, the highest zoom level is 14 or 15. Despite Mapbox claims that for `Mapbox Terrain-DEM v1` data until zoom level 15 is available, it is only availalbe up to zoom level 14 for most regions. Some have even lower zoom levels and are just upsampled. If the terrain appears blocky after import, lower the zoom level to get better results. `Mapbox Terrain-DEM v1` will be loaded with double resolution and is therefore from the same quality as ``Mapbox Terrain-RGB v1`.  
 [Mapbox Terrain-DEM v1](https://docs.mapbox.com/data/tilesets/reference/mapbox-terrain-dem-v1/)  
 [Mapbox Terrain-RGB v1](https://docs.mapbox.com/data/tilesets/reference/mapbox-terrain-rgb-v1/)  
 Resolutions for each zoom level can be looked up here: [Zoom Level Reference](https://docs.mapbox.com/help/glossary/zoom-level/)  
@@ -28,23 +28,13 @@ Satellite data used is `Mapbox Satellite`.
 
 1. Enable the plugin in the Plugins Tab (`Edit -> Plugins`)
 2. Please make sure to provide your Mapbox API key in `Project Settings -> Plugins -> Landscaping Mapbox`.
-3. Open Landscaping plugin from the Toolbar  
-![Landscaping Mapbox](_media/ue4_landscaping_dtm_huge.jpg)  
+3. Open the `Landscaping System Tab` from the Toolbar and choose `Mapbox` as Data Source
 4. Click on `Options` next to `DTM Import Options`
+5. Make a bounding box with the rectangle tool from the left hand side, __make sure it is not too big when you try it the first time__
+6. Close the `DTM Import Options` dialog
+7. Hit `Import`
 
-> In UE5 you can directly select the area in the `DTM Import Options` and do not have to copy-paste the values from the browser  
-> ![Landscaping Mapbox UE5](_media/ue5_mapbox_dtm_select.jpg)  
->
-> - Select the filled black rectangle on the left side of the maps UI  
-> - Draw a rectangle what area should be imported
-> - Select the Mapbox Zoom Level
-> - Continue with point 8. below
-
-5. Click on `Show Map` on the top right corner -> a browser window with the map of the world will open
-6. Make a bounding box with the rectangle tool from the left hand side
-7. Copy - Paste the coordinates from the address after the # into the `Corners as bounding box` input field - the approximate area, which will be imported will appear on the top left corner. (Please do not import areas greater than a couple of thousand square kilometers, Unreal Engine needs about 20 GB RAM per 1000 km² landscape).
-8. Close the `DTM Import Options` dialog
-9. Hit `Import`
+![Landscaping Mapbox](_media/ue_landscaping_mapbox.jpg)
 
 > See also [DTM Import Options](heights?id=import-area-optional)
 
@@ -110,3 +100,20 @@ NOTE: If you see black areas in the result, the zoom level is to high, and mapbo
 Enable a warning message popup before downloading more than a certain number of tiles (e.g. > 1000 tiles), to not accidently exeed the free tier of Mapbox.
 Currently the free tier include 750,000 raster tiles (heightmap/satellite) and 200,000 vector tiles per month.
 A value of 0 means no warn messages and is the default.
+> ❗ __Important__: Loading huge areas of data from mapbox with a high zoom level might exceed the free tier. ❗
+
+### Styles
+
+Query styles instead of satellite images. This needs a username and a style id.  
+
+### Username
+
+The username of the mapbox account to which the style belongs
+
+### Style Id
+
+The ID of the style
+
+#### Mapbox Styles tutorial video
+
+[![Mabpox Styles](https://img.youtube.com/vi/pUUEkK1hi4A/0.jpg)](https://www.youtube.com/watch?v=pUUEkK1hi4A)

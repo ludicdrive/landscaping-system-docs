@@ -42,7 +42,7 @@ Sources for DTM files are for example:
 
 ### Terrain import system requirements
 
-> ❗**Important**: Make sure you understand the data you are trying to import. Read the description of the heightdata file on the website where you are downloading it and think about how big the landscape will be. E.g. importing a 10500 x 8600 pixel GeoTiff with a resolution of 8 meter per pixel will result in a 5780 km² landscape. You can limit the import area in the [DTM Import Options](heights.md?id=options). Importing huge areas might exhaust your system or video memory and Unreal Engine will crash. After loading the files a message in the output log will tell you, if the system has probably enough resources to import the data. ❗
+> ❗ __Important__: Make sure you understand the data you are trying to import. Read the description of the heightdata file on the website where you are downloading it and think about how big the landscape will be. E.g. importing a 10500 x 8600 pixel GeoTiff with a resolution of 8 meter per pixel will result in a 5780 km² landscape. You can limit the import area in the [DTM Import Options](heights.md?id=options). Importing huge areas might exhaust your system or video memory and Unreal Engine will crash. After loading the files a message in the output log will tell you, if the system has probably enough resources to import the data. ❗
 
 It is possible to have a look at the data before importing. [QGIS](https://qgis.org/) is a free tool which can be used to see how the data looks like before importing it.
 

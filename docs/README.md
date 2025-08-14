@@ -1,13 +1,15 @@
 # Welcome
 
 Landscaping System - Unreal Engine Editor Plugin  
+> [Landscaping System](https://unrealassetstore.com/product/landscaping-system) is the successor of [Landscaping](https://unrealassetstore.com/product/landscaping-system)
 
 ## For whom
 
-- Level designers
-- Town and Country planners
+- Level Designers
+- Town and Country Planners
 - Architects
 - Visualization Artists
+- Simulation Technicians
 
 > Completely automated, just load the files or use [Landscaping Mapbox](https://unrealassetstore.com/product/landscaping-mapbox) extension to auto-download geospatial data data from mapbox
 

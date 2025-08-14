@@ -8,10 +8,23 @@ The __Landscaping System__ is very easy to learn, but because geospatial data ca
 
 ## Workflow order
 
-1. Import Landscape [🔗](heights.md)
+1. Import Terrain as landscape or mesh [🔗](heights.md)
 2. Assign Landscape Material and create Weightmaps (optional) [🔗](landcover.md)
 3. Import Satellite Data (optional) [🔗](satellite.md)
 4. Import vector data [🔗](props.md)
 5. Leverage Procedural Content Generation PCG [🔗](vegetation.md)
 
-Only the import of the landscape has to be the starting point to set the georeference. If a landscape is imported as mesh (and not landscape), a landscape material is not necessary and the next step would be the import of satellite data.
+The import of the terrain has to be the starting point in any case, because there the georeference is set. If a landscape is imported as mesh (and not landscape), a landscape material is not necessary and the next step would be the import of satellite data.
+
+## Landscaping System Tab
+
+The __Landscaping System Tab__ reflects the workflow from top to bottom.
+> :bulb: __Good to know__: By hovering with the mouse cursor over a button or label a tooltip will appear with a help text. :bulb:
+
+### Data Source
+
+Data source for the import operation. Currently the options `Files` and `Mapbox` is supported. Mapbox needs the [Landscaping Mapbox](https://unrealassetstore.com/product/landscaping-mapbox) extension.
+
+### Mapbox Zoom Level
+
+Set the Zoom Level for Mapbox heightdata imports (see [Mapbox Documentation](mapbox.md)). Only available with Mapbox Extension.
