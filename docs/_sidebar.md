@@ -4,6 +4,7 @@
 
 - Guide
 
+  - [Workflow](workflow.md?id=landscaping-system-workflow)
   - [Terrain](heights.md?id=heights)
   - [Landscape Material](landcover.md?id=landcover)
   - [Satellite Imagery](satellite?id=satellite)

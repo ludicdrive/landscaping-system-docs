@@ -46,6 +46,9 @@ When installing the plugin to the Unreal Engines `Plugins` folder, you have to a
 5) Scroll to `Desired Max Tile Size` and increase the value to 12000. This will make sure, that only one landscape will be generated
 6) Close the `DTM Options` and hit the `Import from Files` button - the landscape will be imported within a few seconds 🌍
 
+![Landscaping System Tab](_media/landscaping_system_first_import.jpg)
+With the file from above, the result will look like this.
+
 > :bulb: **Good to know**: Every time you open a new level, you should close and re-open the __Landscaping System Tab__ for proper initialization. :bulb:
 
 ## Next steps

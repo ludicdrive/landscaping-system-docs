@@ -1,5 +1,5 @@
 # Landscaping System <!-- {docsify-ignore} -->
 
-> 🛰️🌍 Import geospatial data into Unreal Engine 🗻🗺️
+> 🛰️🌍 Geospatial data import system for Unreal Engine 🗻🗺️
 
 [Documentation](#Welcome)
