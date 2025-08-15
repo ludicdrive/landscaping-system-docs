@@ -60,7 +60,7 @@ While it is possible to import any Vector data (Shapefile, GeoJSON, GeoPackage w
 
 After you downloaded the Shapefiles from geofabrik and unzipped the folder a collection of different aspects of the country can be found splitted into many files.
 
-![Landscaping System Tab](_media/ue4_Landscaping System_shapefile.jpg)
+![Landscaping System Tab](_media/ue4_landscaping_shapefile.jpg)
 
 For [weightmap generation](landcover.md) following files are relevant:
 
