@@ -11,7 +11,8 @@
   - [Splines / Actors / Blueprints](props.md?id=props)
   - [PCG](vegetation.md?id=vegetation)
   - [Mapbox](mapbox.md?id=mapbox)
-
+  - [Build](build.md?id=build)
+  
 - Fine tuning
 
   - [Settings](settings.md?id=settings)

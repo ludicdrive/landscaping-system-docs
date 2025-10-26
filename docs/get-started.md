@@ -20,6 +20,10 @@ For Linux and MacOS, you can just select the projects `Plugins` folder to instal
 
 After downloading a specific version from the [Unreal/Assetstore Website](https://unrealassetstore.com/my-account/downloads/), extract the zipped file with 7zip, then copy it to the projects `Plugins` folder.
 
+## Build
+
+On Linux and Mac OS the plugin has to be built first - see [Build](build.md?id=build)
+
 ## Enable plugin
 
 > ❗**Important**: the legacy *Landscaping* plugin cannot be used with __Landscaping System__ because __Landscaping System__ is fully backwards compatible and therefore the legacy *Landscaping* plugin must be removed before enabling __Landscaping System__ ❗
