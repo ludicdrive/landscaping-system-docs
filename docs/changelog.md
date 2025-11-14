@@ -2,9 +2,13 @@
 
 Changelog for the documentation see: [The Landscaping System Docs on Github](https://github.com/ludicdrive/landscaping-system-docs)
 
-## Version 8.2
+## Version 8.3
 
 - Feature: UE 5.7 compatibility
+
+## Version 8.2
+
+- Feature: UE 5.7 (Preview) compatibility
 - Bugfix: pre-select color channel for weightmap noise texture
 
 ## Version 8.1
