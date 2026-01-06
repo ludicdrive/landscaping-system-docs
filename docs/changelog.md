@@ -2,6 +2,11 @@
 
 Changelog for the documentation see: [The Landscaping System Docs on Github](https://github.com/ludicdrive/landscaping-system-docs)
 
+## Version 8.4
+
+- Feature: [Seamless horizontal Tiling](heights.md?id=seamless-horizontal-tiling)
+- Bugfix: Mapbox import when file import is selected but no file loaded
+
 ## Version 8.3
 
 - Feature: UE 5.7 compatibility

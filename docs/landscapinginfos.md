@@ -26,14 +26,22 @@ Changing the `Allowed DTM file Types` allows you to select other DTM files. In t
 
 ### Use Precise Scale
 
-Deprecated. Wheter to use precise scale (double). Default is true.  
+DEPRECATED. Wheter to use precise scale (double). Default is true. See also `Seamless Tiling` below.
+
+### Seamless Tiling
+
+Seamless tiling is for large worlds using World Partition or with multiple Landscapes. See also [Seamless horizontal Tiling](heights.md?id=seamless-horizontal-tiling).
+
+### Seamless Diff Factor
+
+If `Seamless Tiling` is enabled, this is the factor the imported area is larger than what the actual result from the Worlds `Root Projection` (EPSG:xxxx) would be.
 
 ## Scale
 
 ### Landscape Scale Factor
 
-For special purpouses, if one wishes to create World Partition with a different scale than the real world scale, the Landscape Scale can be overwritten with `Landscape Scale Factor`.
-Landscape Scale effects both, the scale of the final Landscape imported from DTM files and the points of the Shapefile.
+For special purpouses, if one wishes to create a World with a different scale than the real world scale, this `Landscape Scale Factor` can be applied to the Landscape's scale.
+The `Landscape Scale Factor` effects both, the scale of the final Landscape imported from DTM files and the vector data (e.g. Shapefile, vector tiles from Mapbox).
 
 > :bulb: __Good to know__: The internal calculated scale of the resulting Landscape will be multiplied with this value. E.g. if the value is set to 0.3048 the resulting Landscape size will be as if the import unit is feet (default is meter). :bulb:
 

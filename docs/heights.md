@@ -8,7 +8,7 @@ To load a DTM file, make sure the `Files` data source is selected and then click
 
 > :bulb: __Good to know__: A terrain can be created from a single file or from multiple files. :bulb:
 
-For both, `World Partition` and non-World-Partitioned Worlds, the `Desired Max Tile Size` will control the maximum size of a single landscape or mesh terrain. See Options below.
+For both, `World Partition` and non-World-Partitioned Worlds, the `Desired Max Tile Size` will control the maximum size of a single Landscape or mesh terrain. See Options below.
 
 > :bulb: __Good to know__: To delete the loaded data from memory simply close the __Landscaping System Tab__ and open it again. :bulb:
 
@@ -23,7 +23,8 @@ For downloading heightmaps from Mapbox using the [Landscaping Mapbox](https://un
 
 You can view and/or select the area of the loaded file in the integrated browser. With the edit icon 📝 on the left side (second icon from the bottom), the area can be changed by dragging the corners of the rectangle.
 
-After applying the new area the info text shows the new extent of the area. Only this part of the heightdata will be imported.
+After applying the new area the info text shows the new extent of the area. Only this part of the heightdata will be imported.  
+In the `Output Log` a Warning will appear after choosing the area, e.g.: `Selected 1.25 km² with 128 GB RAM and avg meter per pixel of 0.500000. MemoryGB/Area*MeterPerPixel: 51.151964 (above 0.1 is fine - this applies for Landscapes and not Meshes)` -> this indicates the system's capability to perform the import. The value in this example `51.151964` is above `0.1` which means the system has enough RAM to perform the import.  
 
 > ❗ __Important__: Unreal Engine needs a lot of RAM during the creation of a Landscape. Please make sure that you have enough RAM when importing huge areas! ❗
 
@@ -31,9 +32,13 @@ After applying the new area the info text shows the new extent of the area. Only
 
 ### Location
 
-The X and Y Location of the Landscape will be at 0/0 per default. (first Tile, if multiple tiles are generated). The pivot of a Landscape is on the top-left corner. With `Center` the Landscape is positioned, so that it is centered in the UE coordinate system. If X and Y are set to 0, the Landscape will expand from 0 to the bottom and to the right.
+The X and Y location of the Landscape will be at 0/0 per default. (first Tile, if multiple tiles are generated). The pivot of a Landscape is on the top-left corner. With `Center` the Landscape is positioned, so that it is centered in the UE coordinate system. If X and Y are set to 0, the Landscape will expand from 0 to the bottom and to the right.
 
-> :bulb: __Good to know__: The Z Location is the real location ASL (above sea level) of the heightmap. :bulb:
+> :bulb: __Good to know__: The Z location is the real location ASL (above sea level) of the heightmap. :bulb:
+
+### Scale Factor
+
+Scale a Landscape by this factor. This will applied for the whole level and will also scale vector data proportionally to fit the landscape. See also [Landscape Scale Factor](landscapinginfos.md?id=scale).  
 
 ### High Detail Z Scale
 
@@ -41,7 +46,13 @@ The vertical scale will be calculated automatically to perserve the most detail,
 
 ### Custom Landscape Z Scale
 
-Use this for areas with low altitude difference. Defaults to `100`. For understanding the technical reason for this, please consult [Calculating Heightmap Z Scale](https://docs.unrealengine.com/5.1/en-US/landscape-technical-guide-in-unreal-engine/).  
+Use this for areas with low altitude difference. Defaults to `100`. Technical Background: [Calculating Heightmap Z Scale](https://dev.epicgames.com/documentation/en-us/unreal-engine/landscape-technical-guide-in-unreal-engine).  
+
+### Seamless horizontal Tiling
+
+Seamless tiling is for large worlds using World Partition or with multiple Landscapes. This option will remove gaps and overlaps. The scale will be up-rounded to integer and therefore the imported Landscape will be larger by a small margin. See LandscapingInfos [Seamless Diff Factor](landscapinginfos.md?id=seamless-diff-factor) for exact value after import.
+
+> :bulb: __Good to know__: If you plan to extend the area with additional Landscapes later, this option should be enabled. :bulb:
 
 ## Landscape Generation Options
 
@@ -59,15 +70,15 @@ Calculate Sections and Components of the Landscape to import automatically given
 
 ### Section Size
 
-Please see [Landscape Technical Guide](https://docs.unrealengine.com/5.2/en-US/landscape-technical-guide-in-unreal-engine/)
+Please see [Landscape Technical Guide](https://dev.epicgames.com/documentation/en-us/unreal-engine/landscape-technical-guide-in-unreal-engine)
 
 ### Sections per Component
 
-Please see [Landscape Technical Guide](https://docs.unrealengine.com/5.2/en-US/landscape-technical-guide-in-unreal-engine/)
+Please see [Landscape Technical Guide](https://dev.epicgames.com/documentation/en-us/unreal-engine/landscape-technical-guide-in-unreal-engine)
 
 ### Number of Components
 
-Please see [Landscape Technical Guide](https://docs.unrealengine.com/5.2/en-US/landscape-technical-guide-in-unreal-engine/)
+Please see [Landscape Technical Guide](https://dev.epicgames.com/documentation/en-us/unreal-engine/landscape-technical-guide-in-unreal-engine)
 
 ### Landscape Resolution
 
@@ -75,11 +86,11 @@ Shows the expected Landscape Resolution in vertices as an estimate. Exact number
 
 ### Desired Max Tile Size
 
-The maximum size of a created terrain imports in meter (Landscape or Mesh). If the size of a single Landscape exceeds this size, it will be split, and multiple Landscape Actors or meshes are created in the level. This is the size of the resulting Landscape in Unreal Engine, not the max size or resolution of a source file (like GeoTiff, etc.). E.g. a value of 32768 meter will import landscapes with maximum 32 km length or width. 32768 will need at least 64 GB of RAM with a input resolution of 1 meter/pixel. `Desired Max Landscape Size` defaults to `8192` meter.  
+The maximum size of a created terrain imports in meter (Landscape or Mesh). If the size of a single Landscape exceeds this size, it will be split, and multiple Landscape Actors or meshes are created in the level. This is the size of the resulting Landscape in Unreal Engine, not the max size or resolution of a source file (like GeoTiff, etc.). E.g. a value of 32768 meter will import Landscapes with maximum 32 km length or width. 32768 will need at least 64 GB of RAM with a input resolution of 1 meter/pixel. `Desired Max Landscape Size` defaults to `8192` meter.  
 
 ### World Partition Grid Size
 
-Grid size for the World Partition Landscape. It is possible to specify the grid size of the World Partition to segment a Landscape into Landscape Streaming Proxies. For performance it is best to have only one landscape in a scene, which is divided in Landscape Streaming Proxies automatically.
+Grid size for the World Partition Landscape. It is possible to specify the grid size of the World Partition to segment a Landscape into Landscape Streaming Proxies. For performance it is best to have only one Landscape in a scene, which is divided in Landscape Streaming Proxies automatically.
 
 > Please make sure you use the `Empty Open World` Template when using World Partition and check `Enable Streaming` in World Settings.
 
@@ -97,7 +108,7 @@ Will import all imported DTM files (or Mapbox height data) to the resolution of 
 
 ### Smooth Steps
 
-Apply gaussian blur on the height data before importing the landscape. This will smooth raster data with low resolution.  
+Apply gaussian blur on the height data before importing the Landscape. This will smooth raster data with low resolution.  
 0 means, no smoothing will happen.
 For Mapbox imports the recommended value is 1 for mountain terrain, and 2 for flat terrain.  
 
@@ -121,17 +132,17 @@ For more info on this see the tutorial video:
 
 ### Minimum height tolarance
 
-The distance between the lowest valid point of an already imported landscape and the bottom flat area (no data area) in centimeter
+The distance between the lowest valid point of an already imported Landscape and the bottom flat area (no data area) in centimeter
 
 ## Landscape Material (optional)
 
 ![Landscape Material](_media/ue5_dtm_import.jpg)
 
-Assign a Landscape Material which will be applied to the imported Landscape.
+Assign a Landscape Material which will be applied to the imported Landscape. See also [Landscape Material](landcover.md).
 
-## Default Layer (only valid if Landscape Material with Layers is selected)
+## Default Layer (Landscape Material with Paint Layers necessary)
 
-The Landscape Material's default paint layer, with which the landscape will be filled.  
+The Landscape Material's default paint layer, with which the Landscape will be filled.  
 > :bulb: __Good to know__: Some Landscape Materials include a __Invisible__ layer, which makes the Landscape invisible. Make sure this layer is not selected. :bulb:
 For more about Lanscape Materials see Chapter [Landscape Material](landcover.md).
 
