@@ -29,3 +29,16 @@ Open the visual studio code project, it is called `<project name>.code-workspace
 > Landscaping System for Mac OS includes binaries for Arm64 (M1, M2, ...), not the old intel processor architecture!
 
 The build will start and after the build completes successfully, the plugin can be used in the Unreal Engine project.  
+
+## Troubleshooting
+
+### Linux
+
+Tested Linux versions:  
+
+- (K)Ubuntu 22.04
+- (K)Ubuntu 24.04
+
+#### Ubuntu 24.04
+
+If messages like `Warning: dlopen failed: libaec.so.0: cannot open shared object file: No such file or directory` appear, run the `install_dependencies.sh` script in the plugins folder (needs sudo).
