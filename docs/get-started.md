@@ -40,7 +40,7 @@ When installing the plugin to the Unreal Engines `Plugins` folder, you have to a
 
 ## Import your first terrain with Landscaping System
 
-> Download an example heightmap in [GeoTiff](https://cloud.ludicdrive.com/s/pVh3U8TpAg27Foa/download) format, or use another DTM (Digital Terrain Model) file or multiple files.
+> Download an example heightmap in [GeoTiff](https://drive.google.com/file/d/1t4-5z_U8M6OZkT0lp0JtgJ9u6CSNN5jo/view) format, or use another DTM (Digital Terrain Model) file or multiple files.
 
 1) Start with a new empty level: Go to "File -> New Level -> __Empty Open World__ or __Empty Level__"
 2) After clicking on the __Landscaping System Icon__ 🌍 on the toolbar, the __Landscaping System Tab__ pops up:  
