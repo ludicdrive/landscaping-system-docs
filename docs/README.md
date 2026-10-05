@@ -21,6 +21,7 @@ Landscaping System - Unreal Engine Editor Plugin
 - No size limit because of full World Composition support
 - Create Actors, Splines and custom Blueprints from geospatial vector data
 - Automate PCG volume creation
+- Drive the plugin from Python, see [Automation](automation.md?id=automation)
 - Works offline without restrictions
 - Use datatables for runtime content generation
 - Windows, Linux and MacOS (Arm64) support

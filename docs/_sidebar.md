@@ -12,7 +12,11 @@
   - [PCG](vegetation.md?id=vegetation)
   - [Mapbox](mapbox.md?id=mapbox)
   - [Build](build.md?id=build)
-  
+
+- Scripting
+
+  - [Automation](automation.md?id=automation)
+
 - Fine tuning
 
   - [Settings](settings.md?id=settings)
