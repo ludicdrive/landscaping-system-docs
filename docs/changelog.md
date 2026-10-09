@@ -10,6 +10,7 @@ Changelog for the documentation see: [The Landscaping System Docs on Github](htt
 - Bugfix: creating Actors, Splines and Blueprints used a stale tile selection instead of the current one
 - Bugfix: scripted runs no longer save the Level implicitly. The interactive flow saves in a few places and those saves are now suppressed while automating, so a script cannot persist anything on its own
 - Bugfix: a projected WKT without a matching EPSG code is accepted instead of rejected, and EPSG codes are validated through PROJ instead of against a numeric range
+- Bugfix: a CRS that has no EPSG code is now shown by name with a *(file CRS, no EPSG code)* note in the Landscaping System Tab and DTM import dialog, and its tooltip states the current CRS, instead of an *EPSG:0 / no CRS set* error
 - Bugfix: a geographic or non-metric CRS is refused as a Level CRS with an actionable error rather than importing into the wrong place
 - Docs: [Allowed Vector File Types](settings.md?id=allowed-vector-file-types), [Extended CRS Compatibility](settings.md?id=extended-crs-compatibility) and [Coordinate reference systems](settings.md?id=coordinate-reference-systems)
 

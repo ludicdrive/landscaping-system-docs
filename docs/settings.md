@@ -108,7 +108,7 @@ As a Level CRS:
 | Input | Result |
 | :--- | :--- |
 | Projected, unit metre, EPSG code known | accepted, the code is reported |
-| Projected, unit metre, no EPSG code but valid WKT | accepted, reported as `0` |
+| Projected, unit metre, no EPSG code but valid WKT | accepted, shown as `<CRS name> (file CRS, no EPSG code)`, reported as `0` |
 | Geographic, e.g. `4326` | refused |
 | Projected but not in metre, e.g. US survey feet | refused |
 | Code not known to PROJ | refused |
@@ -117,7 +117,9 @@ A refused CRS produces an actionable error that names the fix, rather than impor
 
 ### When no EPSG code can be reported
 
-Some projected CRS have a WKT that PROJ cannot match back to an EPSG code. `MGI / Austria Lambert` is one. Such a file is still accepted and reprojected correctly, because the full WKT is carried through and used for the conversion, but there is no code to report.
+Some projected CRS have a WKT that PROJ cannot match back to an EPSG code. `MGI / Austria Lambert` (the ESRI-style `MGI_Austria_Lambert` definition) is one. Such a file is still accepted and reprojected correctly, because the full WKT is carried through and used for the conversion, but there is no code to report.
+
+When a CRS has no EPSG code, the __Landscaping System Tab__ and the DTM Import Options Dialog show it by name followed by *(file CRS, no EPSG code)*, for example `MGI_Austria_Lambert (file CRS, no EPSG code)`. This is an informational label, not an error: no red *no CRS set* warning is shown over the viewport and the import proceeds normally. Hover the label to see the current CRS in the tooltip.
 
 When a script reads `info.projection` it gets `0` in that case. A `0` means "not georeferenced, or georeferenced with a CRS that has no EPSG code", so it should not be read as a failure on its own - read `success` and `tiles_processed` for that.
 
