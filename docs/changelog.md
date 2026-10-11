@@ -2,9 +2,10 @@
 
 Changelog for the documentation see: [The Landscaping System Docs on Github](https://github.com/ludicdrive/landscaping-system-docs)
 
-## Unreleased
+## Version 9.0 (Landscaping System) / Version 4.0 (Landscaping Mapbox)
 
 - Feature: [Automation](automation.md?id=automation) - drive the plugin from Python, including through an AI agent
+- Feature: [Downloading from Mapbox](automation.md?id=downloading-from-mapbox) from a script, as a start-and-poll pair of calls for the background download
 - Feature: [Allow Automation Writes](settings.md?id=allow-automation-writes) to opt into scripted Level modifications
 - Feature: `tiles_processed` now reports the tiles that actually received data instead of the tiles that were walked, and an import that reaches no tile is reported as a failure with a reason
 - Bugfix: creating Actors, Splines and Blueprints used a stale tile selection instead of the current one
@@ -13,6 +14,14 @@ Changelog for the documentation see: [The Landscaping System Docs on Github](htt
 - Bugfix: a CRS that has no EPSG code is now shown by name with a *(file CRS, no EPSG code)* note in the Landscaping System Tab and DTM import dialog, and its tooltip states the current CRS, instead of an *EPSG:0 / no CRS set* error
 - Bugfix: a geographic or non-metric CRS is refused as a Level CRS with an actionable error rather than importing into the wrong place
 - Docs: [Allowed Vector File Types](settings.md?id=allowed-vector-file-types), [Extended CRS Compatibility](settings.md?id=extended-crs-compatibility) and [Coordinate reference systems](settings.md?id=coordinate-reference-systems)
+
+## Version 8.6
+
+- Feature: UE 5.8.2 compatibility (UI texture load logic change)
+
+## Version 8.5
+
+- Feature: UE 5.8 compatibility
 
 ## Version 8.4
 
