@@ -11,7 +11,7 @@ Landscaping System - Unreal Engine Editor Plugin
 - Visualization Artists
 - Simulation Technicians
 
-> Completely automated, just load the files or use [Landscaping Mapbox](https://www.fab.com/listings/8e8a3563-5c98-4fc5-b64f-7eaaec963f13) extension to auto-download geospatial data data from mapbox
+> Completely automated, just load the files or use [Landscaping Mapbox](https://www.fab.com/listings/8e8a3563-5c98-4fc5-b64f-7eaaec963f13) extension to auto-download geospatial data from mapbox
 
 ## Highlights
 
