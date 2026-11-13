@@ -33,6 +33,7 @@ Plugins/LandscapeBrushSettings/
 - The tab opens automatically once when **Landscape Sculpt** mode becomes active.
 - Closing the tab is respected for the current sculpt session. Leave Landscape Sculpt mode and enter it again to auto-open it again.
 - It can also be opened at any time from **Window -> Landscape Brush Settings**.
+- A documentation link at the bottom of the tab opens this page in your browser.
 
 The tab is a regular nomad tab and can be docked anywhere in the editor.
 
@@ -81,6 +82,21 @@ Presets capture the full per-tool state of all known tools plus the four unified
 
 Applying a preset replaces the current in-memory per-tool states with the preset's states and applies the active tool's state right away. Tools that are not part of the preset fall back to being seeded from the live values the next time they are selected.
 
+Presets can also be cycled with the keyboard shortcuts below, so you can switch between brush setups without opening the tab.
+
+## Keyboard shortcuts
+
+Two editor commands cycle through the preset list:
+
+| Command | Default shortcut | Action |
+| --- | --- | --- |
+| **Next Preset** | `Ctrl+Alt+PageDown` | Apply the next preset, wrapping to the first. |
+| **Previous Preset** | `Ctrl+Alt+PageUp` | Apply the previous preset, wrapping to the last. |
+
+The shortcuts work anywhere in the editor while a Landscape tool is active, no matter whether the tab is open, closed or docked. They are ignored while a text field has keyboard focus (for example the preset name field) or while a modal dialog is open. If no preset is active yet, **Next Preset** starts at the first entry and **Previous Preset** at the last one.
+
+The defaults can be changed in **Editor Preferences -> Keyboard Shortcuts**: search for **Landscape Brush Settings** and assign a chord to **Next Preset** and **Previous Preset**.
+
 ## Persistence
 
 Settings are stored per user and per project in:
@@ -120,5 +136,6 @@ It contains the unified toggles, the per-tool `ToolStates`, the named `Presets` 
 | Tab does not open | Make sure the plugin is enabled and the editor was rebuilt. Enter Landscape **Sculpt** mode; the tab opens once per sculpt session. |
 | Values are not restored | Confirm the tool has brush settings (some tools have no brush UI). Make sure the corresponding **Use Unified ...** toggle is off. |
 | Preset does not apply | Select a different preset from the dropdown; selecting the already active entry does not fire a change. |
+| Preset shortcut does nothing | Assign a chord under **Editor Preferences -> Keyboard Shortcuts -> Landscape Brush Settings**, make sure a Landscape tool is active and that no text field has keyboard focus. |
 | Settings lost after restart | Check that the editor can write to `Saved/Config/<Platform>/EditorPerProjectUserSettings.ini`. |
 | Brush jumps back after switching tools | This is expected when the matching unified toggle is off; the tool's stored brush is restored. |
