@@ -1,7 +1,7 @@
 # Welcome
 
 Landscaping System - Unreal Engine Editor Plugin  
-> [Landscaping System](https://unrealassetstore.com/product/landscaping-system) is the successor of [Landscaping](https://unrealassetstore.com/product/landscaping-system)
+> [Landscaping System](https://www.fab.com/listings/86a38d14-bab9-4a62-83c5-dffad027684c)
 
 ## For whom
 
@@ -11,7 +11,7 @@ Landscaping System - Unreal Engine Editor Plugin
 - Visualization Artists
 - Simulation Technicians
 
-> Completely automated, just load the files or use [Landscaping Mapbox](https://unrealassetstore.com/product/landscaping-mapbox) extension to auto-download geospatial data data from mapbox
+> Completely automated, just load the files or use [Landscaping Mapbox](https://www.fab.com/listings/8e8a3563-5c98-4fc5-b64f-7eaaec963f13) extension to auto-download geospatial data from mapbox
 
 ## Highlights
 
@@ -24,9 +24,9 @@ Landscaping System - Unreal Engine Editor Plugin
 - Drive the plugin from Python, see [Automation](automation.md?id=automation)
 - Works offline without restrictions
 - Use datatables for runtime content generation
-- Windows, Linux and MacOS (Arm64) support
+- Windows, Linux and MacOS support
 
 ## Current Version
 
-[Landscaping System](https://unrealassetstore.com/product/landscaping-system): 8.4  
-[Landscaping Mapbox](https://unrealassetstore.com/product/landscaping-mapbox): 3.1
+[Landscaping System](https://www.fab.com/listings/86a38d14-bab9-4a62-83c5-dffad027684c): 9.0  
+[Landscaping Mapbox](https://www.fab.com/listings/8e8a3563-5c98-4fc5-b64f-7eaaec963f13): 4.0
