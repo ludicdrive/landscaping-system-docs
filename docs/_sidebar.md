@@ -32,3 +32,7 @@
   - [Get data](get-data.md?id=get-data)
   - [Troubleshooting](troubleshooting.md?id=troubleshooting)
   - [Changelog](changelog.md?id=changelog)
+
+- Other plugins
+
+  - [Landscape Brush Settings](landscape-brush-settings.md?id=landscape-brush-settings)
